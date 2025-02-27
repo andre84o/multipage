@@ -1,0 +1,28 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/header.ejs") %>
+<section class="main">
+    <div class="image-container"></div>
+    <div><img class="head_img" src="/image/contactus.jpg" height="200" width="auto"></div>
+    <h2 class="contactus-text">Properties for sale</h2>
+   </div>
+
+
+
+    <div class="grid-container">
+        <% proPerties.forEach(property => { %>
+        <div class="box">
+            <a href="/buy/<%= property.id %>">
+            <img class="picbo" src="/image/<%= property.image %>" height="200" width="auto">
+        </a>
+            <h2 class="pro-text"><%= property.area %></h2>
+            <p class="prop-text-under">Price: <%= property.price %></p>
+            <p class="prop-text-under">Size: <%= property.size %></p>
+            <p class="prop-text-under">Bedrooms: <%= property.bedroom %></p>
+        </div>
+        <% }); %>
+    </div>
+    
+
+</section>
+    
+<%- include("partials/footer.ejs") %>

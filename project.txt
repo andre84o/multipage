@@ -1,0 +1,25 @@
+Node
+Index.js
+Data
+%%     heroes.js (with constructors and objects about Heroes and Anitheroes) %%
+    data.js (animals constructor)
+Public
+    Styles(CSS)
+    Images (mapp)
+    video
+    icons
+Routes
+    Buy
+    Sell
+    Contact
+Views
+    -Pages
+        Home.ejs 
+        
+    -Partials
+        head.ejs
+        header.ejs
+        menu.ejs
+        main.ejs
+        footer.ejs
+Packages.json

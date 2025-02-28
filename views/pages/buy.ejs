@@ -1,27 +1,42 @@
 <%- include("partials/head.ejs") %>
 <%- include("partials/header.ejs") %>
 <section class="main">
-    <div class="image-container"></div>
-    <div><img class="head_img" src="/image/contactus.jpg" height="200" width="auto"></div>
+    <%- include("partials/head-image") %>
     <h2 class="contactus-text">Properties for sale</h2>
-   </div>
 
-
-
-    <div class="grid-container">
-        <% proPerties.forEach(property => { %>
-        <div class="box">
-            <a href="/buy/<%= property.id %>">
-            <img class="picbo" src="/image/<%= property.image %>" height="200" width="auto">
-        </a>
-            <h2 class="pro-text"><%= property.area %></h2>
-            <p class="prop-text-under">Price: <%= property.price %></p>
-            <p class="prop-text-under">Size: <%= property.size %></p>
-            <p class="prop-text-under">Bedrooms: <%= property.bedroom %></p>
-        </div>
-        <% }); %>
-    </div>
+   <% if (selectedPropertie) { %>
     
+    <div class="detail-box">
+      <img class="select-image" src="/image/<%= selectedPropertie.image %>" height="200" width="auto"> 
+      <h2 class="prop-text"><%= selectedPropertie.area %></h2>
+      <p class="prop-text-under">ID: <%= selectedPropertie.id %></p>
+      <p class="prop-text-under">Price: <%= selectedPropertie.price %></p>
+      <p class="prop-text-under">Size: <%= selectedPropertie.size %></p>
+      <p class="prop-text-under">Bedrooms: <%= selectedPropertie.bedroom %></p>
+      <p class="prop-text-under">Bathroom: <%= selectedPropertie.bathroom %></p>
+      <p class="prop-text-under">Description: <%= selectedPropertie.description %></p>
+      
+      <a href="/buy">Back to list</a>
+    </div>
+  <% } else if (proPerties) { %>
+    
+    <div class="grid-container">
+      <% proPerties.forEach(property => { %>
+        <div class="box">
+          <a href="/buy/<%= property.id %>">
+            <img class="picbo" src="/image/<%= property.image %>" height="200" width="auto">
+          </a>
+          <h2 class="pro-text"><%= property.area %></h2>
+          <p class="prop-text-under">Price: <%= property.price %></p>
+          <p class="prop-text-under">Size: <%= property.size %></p>
+          <p class="prop-text-under">Bedrooms: <%= property.bedroom %></p>
+        </div>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p>Inga objekt att visa.</p>
+  <% } %>
+  
 
 </section>
     

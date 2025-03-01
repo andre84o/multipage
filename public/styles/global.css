@@ -288,7 +288,7 @@ textarea {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
     .header {
         padding: 0;
@@ -327,7 +327,7 @@ textarea {
 
     .page-text {
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -406,10 +406,9 @@ textarea {
 
     .sell-box {
         flex: 1;
-        margin: 0 100px;
+        margin: 0 50px;
         padding: 20px;
         background-color: #ffffff;
-        
         width: 70%;
         height: 70%;
     }

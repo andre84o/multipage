@@ -10,7 +10,8 @@ import buyRouter from './routes/buy.js';
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
+
 
 const app = express();
 

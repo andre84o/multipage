@@ -44,4 +44,5 @@ app.use("/rent", rentRouter);
 app.use("/sell", sellRouter);
 app.use("/buy", buyRouter);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+export default app;

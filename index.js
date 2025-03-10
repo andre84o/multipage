@@ -19,22 +19,18 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
 console.log("Server running on port:", PORT);
-
-
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.set("views", "./views");
 app.set("view engine", "ejs");
+app.set("views", "./views");
 
 app.get("/" ,(req, res) => {
     res.render ("pages/home",{
         pageTitle: "Home",
         page: "home",
-        
-    
+            
     })
 
 });

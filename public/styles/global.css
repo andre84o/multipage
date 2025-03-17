@@ -45,6 +45,9 @@ body {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    background-image: url('/image/home1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .nav-m {
@@ -174,7 +177,7 @@ h1 {
 }
 
 .home-box2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex: 1 300px;
     max-width: 500px; 
     height: 300px;

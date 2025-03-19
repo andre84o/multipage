@@ -45,9 +45,6 @@ body {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    background-image: url('/image/home1.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .nav-m {
